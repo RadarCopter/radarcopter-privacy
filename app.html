@@ -27,10 +27,10 @@
                 <span>RadarCopter</span>
             </a>
             <nav class="site-nav" aria-label="Site">
-                <a href="app.html" aria-current="page"><span class="lang-en">Home</span><span class="lang-es">Inicio</span></a>
-                <a href="./"><span class="lang-en">Privacy</span><span class="lang-es">Privacidad</span></a>
-                <a href="terms.html"><span class="lang-en">Terms</span><span class="lang-es">Términos</span></a>
-                <a href="support.html"><span class="lang-en">Support</span><span class="lang-es">Soporte</span></a>
+                <a href="#radar"><span class="lang-en">Radar</span><span class="lang-es">Radar</span></a>
+                <a href="https://radarcopter.duckdns.org/visualizer" target="_blank" rel="noopener"><span class="lang-en">Visualizer</span><span class="lang-es">Visualizador</span></a>
+                <a href="#coverage"><span class="lang-en">Coverage</span><span class="lang-es">Cobertura</span></a>
+                <a href="#faq"><span class="lang-en">FAQ</span><span class="lang-es">Preguntas</span></a>
             </nav>
             <div class="lang-switch" role="group" aria-label="Language">
                 <button type="button" data-lang="en" class="on" onclick="rcSetLang('en')">EN</button>
@@ -65,7 +65,7 @@
                     <a class="hero-store-link google-store" href="https://play.google.com/store/apps/details?id=org.radarcopter.mobile" target="_blank" rel="noopener">
                         <img class="store-badge play-badge" data-store="google" src="assets/badge-play-en.png" data-src-en="assets/badge-play-en.png" data-src-es="assets/badge-play-es.png" alt="Get it on Google Play" height="58">
                     </a>
-                    <a class="text-link-light" href="#radar"><span class="lang-en">Explore the radar ↓</span><span class="lang-es">Explorar el radar ↓</span></a>
+                    <a class="visualizer-cta" href="https://radarcopter.duckdns.org/visualizer" target="_blank" rel="noopener"><span class="lang-en">Open public visualizer</span><span class="lang-es">Abrir visualizador público</span><span aria-hidden="true">↗</span></a>
                 </div>
                 <ul class="product-facts lang-en"><li>iPhone + Android</li><li>26 European countries</li><li>CarPlay</li></ul>
                 <ul class="product-facts lang-es"><li>iPhone + Android</li><li>26 países europeos</li><li>CarPlay</li></ul>
@@ -103,6 +103,37 @@
                 <figure class="phone-stage">
                     <img src="assets/radar-live.png" alt="RadarCopter live iPhone radar showing nearby police helicopters" loading="lazy">
                 </figure>
+            </div>
+        </section>
+
+        <section class="product-band scan-band" id="scan-states">
+            <div class="product-inner scan-layout">
+                <div class="scan-intro">
+                    <div class="lang-en" lang="en">
+                        <p class="section-label">Scan status</p>
+                        <h2>Know exactly what the radar is telling you</h2>
+                        <p class="section-lead">A quiet sky is different from a connection problem. RadarCopter keeps each outcome separate so you can tell whether the scan is still working, finished, filtered, offline, or failed.</p>
+                    </div>
+                    <div class="lang-es" lang="es">
+                        <p class="section-label">Estado del escaneo</p>
+                        <h2>Entiende exactamente qué indica el radar</h2>
+                        <p class="section-lead">Un cielo sin actividad no es lo mismo que un problema de conexión. RadarCopter diferencia cada resultado para saber si el escaneo sigue activo, ha terminado, está filtrado, no tiene conexión o ha fallado.</p>
+                    </div>
+                </div>
+                <div class="scan-status-list lang-en" lang="en">
+                    <div class="scan-status is-scanning"><strong>Scanning</strong><span>A request is in progress. The result is not final yet.</span></div>
+                    <div class="scan-status is-clear"><strong>No aircraft found</strong><span>The scan completed successfully and found nothing in the selected radius.</span></div>
+                    <div class="scan-status is-filtered"><strong>Results filtered</strong><span>Aircraft were found, but your current filters hide them.</span></div>
+                    <div class="scan-status is-offline"><strong>Offline</strong><span>The connection is unavailable. RadarCopter retries when it recovers.</span></div>
+                    <div class="scan-status is-failed"><strong>Scan failed</strong><span>The scan ended with an error, rather than an empty result.</span></div>
+                </div>
+                <div class="scan-status-list lang-es" lang="es">
+                    <div class="scan-status is-scanning"><strong>Escaneando</strong><span>Hay una solicitud en curso. El resultado todavía no es definitivo.</span></div>
+                    <div class="scan-status is-clear"><strong>Sin aeronaves</strong><span>El escaneo terminó correctamente y no encontró nada en el radio elegido.</span></div>
+                    <div class="scan-status is-filtered"><strong>Resultados filtrados</strong><span>Se encontraron aeronaves, pero los filtros actuales las ocultan.</span></div>
+                    <div class="scan-status is-offline"><strong>Sin conexión</strong><span>La conexión no está disponible. RadarCopter vuelve a intentarlo cuando se recupera.</span></div>
+                    <div class="scan-status is-failed"><strong>Escaneo fallido</strong><span>El escaneo terminó con un error, no con un resultado vacío.</span></div>
+                </div>
             </div>
         </section>
 
@@ -158,7 +189,7 @@
             </div>
         </section>
 
-        <section class="product-band coverage-band">
+        <section class="product-band coverage-band" id="coverage">
             <div class="product-inner coverage-layout">
                 <div>
                     <p class="coverage-number">26</p>
@@ -170,7 +201,30 @@
                     <h2 class="lang-es">Cobertura que viaja contigo</h2>
                     <p class="section-lead lang-en">From Spain and Western Europe to the Nordics, Central Europe, the Baltics, Serbia, Romania and Turkey. Availability still depends on aircraft transponders and third-party aviation sources.</p>
                     <p class="section-lead lang-es">Desde España y Europa occidental hasta los países nórdicos, Europa central, los Bálticos, Serbia, Rumanía y Turquía. La disponibilidad depende de los transpondedores y de fuentes de aviación externas.</p>
+                    <ul class="country-list lang-en" lang="en">
+                        <li>Spain</li><li>France</li><li>Germany</li><li>Italy</li><li>United Kingdom</li><li>Ireland</li><li>Netherlands</li><li>Belgium</li><li>Luxembourg</li><li>Switzerland</li><li>Austria</li><li>Norway</li><li>Sweden</li><li>Czechia</li><li>Poland</li><li>Hungary</li><li>Slovakia</li><li>Slovenia</li><li>Croatia</li><li>Finland</li><li>Estonia</li><li>Latvia</li><li>Lithuania</li><li>Serbia</li><li>Romania</li><li>Turkey</li>
+                    </ul>
+                    <ul class="country-list lang-es" lang="es">
+                        <li>España</li><li>Francia</li><li>Alemania</li><li>Italia</li><li>Reino Unido</li><li>Irlanda</li><li>Países Bajos</li><li>Bélgica</li><li>Luxemburgo</li><li>Suiza</li><li>Austria</li><li>Noruega</li><li>Suecia</li><li>Chequia</li><li>Polonia</li><li>Hungría</li><li>Eslovaquia</li><li>Eslovenia</li><li>Croacia</li><li>Finlandia</li><li>Estonia</li><li>Letonia</li><li>Lituania</li><li>Serbia</li><li>Rumanía</li><li>Turquía</li>
+                    </ul>
                 </div>
+            </div>
+        </section>
+
+        <section class="product-band android-band" id="android">
+            <div class="product-inner android-layout">
+                <div>
+                    <p class="section-label">Android</p>
+                    <h2 class="lang-en">RadarCopter is available on Android</h2>
+                    <h2 class="lang-es">RadarCopter está disponible en Android</h2>
+                    <p class="section-lead lang-en">Install it directly from Google Play. The Android app includes the live nearby-aircraft radar, categories, radius controls, and alerts.</p>
+                    <p class="section-lead lang-es">Instálala directamente desde Google Play. La app para Android incluye el radar de aeronaves cercanas, categorías, control de radio y alertas.</p>
+                    <p class="android-status lang-en">Available now on Google Play.</p>
+                    <p class="android-status lang-es">Disponible ahora en Google Play.</p>
+                </div>
+                <a class="android-store-link" href="https://play.google.com/store/apps/details?id=org.radarcopter.mobile" target="_blank" rel="noopener">
+                    <img class="store-badge play-badge" data-store="google" src="assets/badge-play-en.png" data-src-en="assets/badge-play-en.png" data-src-es="assets/badge-play-es.png" alt="Get it on Google Play" height="72" loading="lazy">
+                </a>
             </div>
         </section>
 
@@ -188,6 +242,38 @@
             </div>
         </section>
 
+        <section class="product-band faq-band" id="faq">
+            <div class="product-inner faq-layout">
+                <div>
+                    <p class="section-label lang-en">Questions</p><p class="section-label lang-es">Preguntas</p>
+                    <h2 class="lang-en">Frequently asked questions</h2>
+                    <h2 class="lang-es">Preguntas frecuentes</h2>
+                    <p class="section-lead lang-en">Quick answers about scan results, coverage, alerts, CarPlay, Android, and privacy.</p>
+                    <p class="section-lead lang-es">Respuestas rápidas sobre los escaneos, la cobertura, las alertas, CarPlay, Android y la privacidad.</p>
+                </div>
+                <div class="faq-list lang-en" lang="en">
+                    <details class="faq"><summary>Why don't I see any aircraft right now?</summary><p>Most of the time, nothing is flying near you. RadarCopter separates a completed empty scan from filtered results, an offline connection, and a failed scan so you can tell which state applies.</p></details>
+                    <details class="faq"><summary>Which countries does RadarCopter cover?</summary><p>RadarCopter covers the 26 European countries listed above, and coverage can grow as additional countries are added.</p></details>
+                    <details class="faq"><summary>Does RadarCopter work with CarPlay?</summary><p>Yes. RadarCopter 1.7.0 includes a Pro CarPlay view that follows the car and direction of travel, keeps police and ordinary aircraft distinct, and provides radius, filter, and recenter controls.</p></details>
+                    <details class="faq"><summary>Does the app work in the background?</summary><p>Yes. With Pro and the required permissions, RadarCopter can monitor in the background and issue enabled voice, sound, or notification alerts. Timing still depends on iOS or Android background-execution rules and network availability.</p></details>
+                    <details class="faq"><summary>Where does the flight data come from?</summary><p>Live aircraft positions come from third-party aviation providers such as Flightradar24 and, where enabled, public ADS-B data from ADSB.lol.</p></details>
+                    <details class="faq"><summary>What about my privacy?</summary><p>Your location is used in real time only and is not stored, and there are no accounts. The full details are in the Privacy Policy linked below.</p></details>
+                    <details class="faq"><summary>Is RadarCopter on Android too?</summary><p>Yes. The Android app is available on Google Play alongside the iPhone app on the App Store.</p></details>
+                    <details class="faq"><summary>How do I get help?</summary><p>Use Report a Problem inside the app, or email <a href="mailto:support@radarcopter.org">support@radarcopter.org</a>.</p></details>
+                </div>
+                <div class="faq-list lang-es" lang="es">
+                    <details class="faq"><summary>¿Por qué no veo ninguna aeronave ahora mismo?</summary><p>La mayoría de las veces significa que no hay nada volando cerca. RadarCopter diferencia un escaneo completado sin resultados de los resultados filtrados, la falta de conexión y un error de escaneo.</p></details>
+                    <details class="faq"><summary>¿En qué países funciona RadarCopter?</summary><p>RadarCopter cubre los 26 países europeos indicados arriba y la cobertura puede crecer a medida que se añadan nuevos países.</p></details>
+                    <details class="faq"><summary>¿Funciona RadarCopter con CarPlay?</summary><p>Sí. RadarCopter 1.7.0 incluye una vista CarPlay para Pro que sigue al coche y el sentido de la marcha, diferencia las aeronaves policiales de las ordinarias y ofrece controles de radio, filtros y centrado.</p></details>
+                    <details class="faq"><summary>¿Funciona la app en segundo plano?</summary><p>Sí. Con Pro y los permisos necesarios, RadarCopter puede monitorizar en segundo plano y emitir las alertas de voz, sonido o notificación activadas. El intervalo depende de las reglas de ejecución en segundo plano de iOS o Android y de la conexión disponible.</p></details>
+                    <details class="faq"><summary>¿De dónde vienen los datos de vuelo?</summary><p>Las posiciones en directo vienen de proveedores externos de datos de aviación como Flightradar24 y, cuando está activado, datos ADS-B públicos de ADSB.lol.</p></details>
+                    <details class="faq"><summary>¿Qué pasa con mi privacidad?</summary><p>Tu ubicación se usa solo en tiempo real y no se almacena, y no hay cuentas. Todos los detalles están en la Política de Privacidad enlazada abajo.</p></details>
+                    <details class="faq"><summary>¿RadarCopter está también en Android?</summary><p>Sí. La app de Android está disponible en Google Play junto a la app de iPhone en el App Store.</p></details>
+                    <details class="faq"><summary>¿Cómo consigo ayuda?</summary><p>Usa Informar de un problema dentro de la app o escribe a <a href="mailto:support@radarcopter.org">support@radarcopter.org</a>.</p></details>
+                </div>
+            </div>
+        </section>
+
         <section class="product-band product-caveat">
             <div class="product-inner">
                 <h2 class="lang-en">Useful context, never a guarantee</h2>
@@ -202,10 +288,16 @@
         </section>
     </main>
 
+    <aside class="mobile-action-bar" aria-label="RadarCopter actions">
+        <a class="mobile-download" id="mobile-store-link" href="https://apps.apple.com/es/app/radarcopter/id6758215340" rel="noopener"><span id="mobile-store-label">Download</span></a>
+        <a href="https://radarcopter.duckdns.org/visualizer" target="_blank" rel="noopener"><span class="lang-en">Visualizer</span><span class="lang-es">Visualizador</span></a>
+    </aside>
+
     <footer class="site-footer">
         <p>RadarCopter © 2026 · <a href="mailto:support@radarcopter.org">support@radarcopter.org</a></p>
         <p>
             <a href="app.html"><span class="lang-en">Home</span><span class="lang-es">Inicio</span></a> ·
+            <a href="https://radarcopter.duckdns.org/visualizer" target="_blank" rel="noopener"><span class="lang-en">Public Visualizer</span><span class="lang-es">Visualizador público</span></a> ·
             <a href="./"><span class="lang-en">Privacy Policy</span><span class="lang-es">Política de Privacidad</span></a> ·
             <a href="terms.html"><span class="lang-en">Terms of Use</span><span class="lang-es">Términos de Uso</span></a> ·
             <a href="support.html"><span class="lang-en">Support</span><span class="lang-es">Soporte</span></a>

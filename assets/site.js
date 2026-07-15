@@ -1,6 +1,7 @@
 /* RadarCopter site — language switching (EN/ES) */
 (function () {
   var KEY = "rc-lang";
+  var isAndroid = /Android/i.test(navigator.userAgent || "");
 
   function detect() {
     try {
@@ -32,13 +33,34 @@
         badges[j].alt = lang === "es" ? "Descargar en el App Store" : "Download on the App Store";
       }
     }
+    var mobileStore = document.getElementById("mobile-store-link");
+    var mobileStoreLabel = document.getElementById("mobile-store-label");
+    if (mobileStore && mobileStoreLabel) {
+      mobileStore.href = isAndroid
+        ? "https://play.google.com/store/apps/details?id=org.radarcopter.mobile"
+        : "https://apps.apple.com/es/app/radarcopter/id6758215340";
+      mobileStoreLabel.textContent = isAndroid
+        ? (lang === "es" ? "Google Play" : "Google Play")
+        : (lang === "es" ? "App Store" : "App Store");
+    }
     try { localStorage.setItem(KEY, lang); } catch (e) {}
   }
 
   window.rcSetLang = apply;
 
-  if (/Android/i.test(navigator.userAgent || "")) {
+  if (isAndroid) {
     document.documentElement.classList.add("is-android");
+  }
+
+  var mobileBar = document.querySelector(".mobile-action-bar");
+  var hero = document.querySelector(".product-hero");
+  if (mobileBar && hero && "IntersectionObserver" in window) {
+    var heroObserver = new IntersectionObserver(function (entries) {
+      mobileBar.classList.toggle("is-visible", !entries[0].isIntersecting);
+    }, { threshold: 0.08 });
+    heroObserver.observe(hero);
+  } else if (mobileBar) {
+    mobileBar.classList.add("is-visible");
   }
 
   var header = document.querySelector(".site-header");
