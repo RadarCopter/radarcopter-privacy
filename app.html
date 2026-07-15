@@ -8,8 +8,8 @@
     <link rel="canonical" href="https://radarcopter.github.io/radarcopter-privacy/app.html">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f6f8">
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d1117">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f5f5">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#091216">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="RadarCopter">
     <meta property="og:title" content="RadarCopter — Live police-helicopter radar for iPhone">
@@ -18,7 +18,8 @@
     <meta property="og:image" content="https://radarcopter.github.io/radarcopter-privacy/assets/radar-live.png">
     <link rel="stylesheet" href="assets/site.css">
 </head>
-<body>
+<body class="product-page">
+    <a class="skip-link" href="#main"><span class="lang-en">Skip to content</span><span class="lang-es">Saltar al contenido</span></a>
     <header class="site-header">
         <div class="inner">
             <a class="brand" href="app.html">
@@ -38,56 +39,97 @@
         </div>
     </header>
 
-    <main class="product-main">
+    <main class="product-main" id="main">
         <section class="product-hero" aria-labelledby="product-title">
-            <img class="product-hero-media" src="assets/radar-live.png" alt="RadarCopter live radar showing nearby police helicopters and activity areas">
+            <picture>
+                <source media="(max-width: 680px)" srcset="assets/radar-live.png">
+                <img class="product-hero-media" src="assets/carplay-radar.png" alt="RadarCopter live radar showing nearby police helicopters and aircraft">
+            </picture>
             <div class="product-hero-shade"></div>
             <div class="product-hero-copy">
+                <span class="live-pill"><span class="lang-en">Live aviation picture</span><span class="lang-es">Imagen aérea en directo</span></span>
                 <div class="lang-en" lang="en">
-                    <p class="product-kicker">Live aviation awareness for iPhone</p>
+                    <p class="product-kicker">Aviation awareness for iPhone and CarPlay</p>
                     <h1 id="product-title">RadarCopter</h1>
-                    <p>See nearby aircraft, receive police-helicopter alerts, and keep the essential radar view with you in CarPlay.</p>
+                    <p class="hero-statement">Know what is flying nearby. See police helicopters clearly, understand their direction, and receive alerts without watching the screen.</p>
                 </div>
                 <div class="lang-es" lang="es">
-                    <p class="product-kicker">Información aérea en directo para iPhone</p>
+                    <p class="product-kicker">Información aérea para iPhone y CarPlay</p>
                     <h1>RadarCopter</h1>
-                    <p>Consulta las aeronaves cercanas, recibe alertas de helicópteros policiales y lleva la vista esencial del radar a CarPlay.</p>
+                    <p class="hero-statement">Descubre qué vuela cerca. Identifica helicópteros policiales, entiende su dirección y recibe alertas sin mirar la pantalla.</p>
                 </div>
-                <a class="hero-store-link" href="https://apps.apple.com/es/app/radarcopter/id6758215340" rel="noopener">
-                    <img class="store-badge" src="assets/badge-en.svg" data-src-en="assets/badge-en.svg" data-src-es="assets/badge-es.svg" alt="Download on the App Store" height="48">
-                </a>
-                <p class="product-facts lang-en">26 countries · Background alerts · CarPlay</p>
-                <p class="product-facts lang-es">26 países · Alertas en segundo plano · CarPlay</p>
+                <div class="hero-actions">
+                    <a class="hero-store-link" href="https://apps.apple.com/es/app/radarcopter/id6758215340" rel="noopener">
+                        <img class="store-badge" src="assets/badge-en.svg" data-src-en="assets/badge-en.svg" data-src-es="assets/badge-es.svg" alt="Download on the App Store" height="50">
+                    </a>
+                    <a class="text-link-light" href="#radar"><span class="lang-en">Explore the radar ↓</span><span class="lang-es">Explorar el radar ↓</span></a>
+                </div>
+                <ul class="product-facts lang-en"><li>26 European countries</li><li>Background alerts</li><li>CarPlay</li></ul>
+                <ul class="product-facts lang-es"><li>26 países europeos</li><li>Alertas en segundo plano</li><li>CarPlay</li></ul>
             </div>
         </section>
 
-        <section class="product-band product-intro">
+        <section class="signal-strip" aria-label="RadarCopter capabilities">
+            <div class="signal-strip-inner">
+                <div class="signal-item"><span class="signal-value">Live</span><span class="signal-label lang-en">Nearby aircraft picture</span><span class="signal-label lang-es">Aeronaves cercanas</span></div>
+                <div class="signal-item"><span class="signal-value">26</span><span class="signal-label lang-en">European countries</span><span class="signal-label lang-es">Países europeos</span></div>
+                <div class="signal-item"><span class="signal-value">50 km</span><span class="signal-label lang-en">Pro scanning radius</span><span class="signal-label lang-es">Radio de escaneo Pro</span></div>
+                <div class="signal-item"><span class="signal-value">CarPlay</span><span class="signal-label lang-en">A focused driving view</span><span class="signal-label lang-es">Vista centrada al conducir</span></div>
+            </div>
+        </section>
+
+        <section class="product-band product-radar" id="radar">
+            <div class="product-inner radar-layout">
+                <div class="radar-copy">
+                    <div class="lang-en" lang="en">
+                        <p class="section-label">Live radar</p>
+                        <h2>The answer is visible at a glance</h2>
+                        <p class="section-lead">Distance, direction, category and recency stay together. The app keeps police contacts visually separate from ordinary aircraft, including when map pins are grouped.</p>
+                    </div>
+                    <div class="lang-es" lang="es">
+                        <p class="section-label">Radar en directo</p>
+                        <h2>La respuesta se entiende de un vistazo</h2>
+                        <p class="section-lead">Distancia, dirección, categoría y actualización aparecen juntas. Los contactos policiales se distinguen de las aeronaves ordinarias, incluso cuando los marcadores se agrupan.</p>
+                    </div>
+                    <div class="feature-rows">
+                        <div class="feature-row"><span class="feature-number">01</span><div><h3 class="lang-en">See the situation</h3><h3 class="lang-es">Observa la situación</h3><p class="lang-en">A live map and compact list keep the nearest contacts readable.</p><p class="lang-es">El mapa y la lista mantienen legibles los contactos más cercanos.</p></div></div>
+                        <div class="feature-row"><span class="feature-number">02</span><div><h3 class="lang-en">Know what it is</h3><h3 class="lang-es">Identifica la aeronave</h3><p class="lang-en">Police, helicopter, aircraft and ground categories remain distinct.</p><p class="lang-es">Policía, helicópteros, aeronaves y tráfico terrestre siguen diferenciados.</p></div></div>
+                        <div class="feature-row"><span class="feature-number">03</span><div><h3 class="lang-en">Choose how to be alerted</h3><h3 class="lang-es">Elige cómo recibir alertas</h3><p class="lang-en">Voice, sound and notifications adapt to foreground and background use.</p><p class="lang-es">Voz, sonido y notificaciones se adaptan al uso en primer o segundo plano.</p></div></div>
+                    </div>
+                </div>
+                <figure class="phone-stage">
+                    <img src="assets/radar-live.png" alt="RadarCopter live iPhone radar showing nearby police helicopters" loading="lazy">
+                </figure>
+            </div>
+        </section>
+
+        <section class="product-band feature-band">
             <div class="product-inner">
                 <div class="lang-en" lang="en">
-                    <p class="section-label">Built for a quick answer</p>
-                    <h2>What is in the air around you?</h2>
-                    <p class="section-lead">RadarCopter turns live aviation data into a calm, readable view of distance, direction and aircraft category. Police aircraft remain visually distinct from ordinary traffic.</p>
+                    <p class="section-label">Built around attention</p>
+                    <h2>Useful while moving. Quiet when it should be.</h2>
+                    <p class="section-lead">RadarCopter gives you control over range, display and alert behavior instead of forcing one noisy mode on every situation.</p>
                 </div>
                 <div class="lang-es" lang="es">
-                    <p class="section-label">Diseñada para responder rápido</p>
-                    <h2>¿Qué está volando a tu alrededor?</h2>
-                    <p class="section-lead">RadarCopter convierte datos de aviación en directo en una vista clara de distancia, dirección y categoría. Las aeronaves policiales se mantienen diferenciadas del tráfico ordinario.</p>
+                    <p class="section-label">Diseñada para cuidar tu atención</p>
+                    <h2>Útil en movimiento. Silenciosa cuando debe serlo.</h2>
+                    <p class="section-lead">RadarCopter te permite controlar el alcance, la visualización y las alertas sin imponer un único modo ruidoso para cada situación.</p>
                 </div>
                 <div class="feature-grid">
                     <article class="feature-item accent-red">
                         <h3 class="lang-en">Focused alerts</h3><h3 class="lang-es">Alertas claras</h3>
-                        <p class="lang-en">Voice, sound and notification options designed for the moments when looking at the phone is not appropriate.</p>
-                        <p class="lang-es">Opciones de voz, sonido y notificación para los momentos en que no conviene mirar el teléfono.</p>
+                        <p class="lang-en">Choose voice and sound behavior for foreground, background, always, or never.</p>
+                        <p class="lang-es">Configura voz y sonido para primer plano, segundo plano, siempre o nunca.</p>
                     </article>
                     <article class="feature-item accent-amber">
                         <h3 class="lang-en">Activity areas</h3><h3 class="lang-es">Zonas de actividad</h3>
-                        <p class="lang-en">Optional map areas built from recent sightings help add context without hiding the live radar.</p>
-                        <p class="lang-es">Las zonas opcionales creadas a partir de avistamientos recientes añaden contexto sin ocultar el radar.</p>
+                        <p class="lang-en">Recent sightings add useful geographic context without obscuring live contacts.</p>
+                        <p class="lang-es">Los avistamientos recientes añaden contexto geográfico sin ocultar contactos en directo.</p>
                     </article>
                     <article class="feature-item accent-green">
                         <h3 class="lang-en">Category-safe display</h3><h3 class="lang-es">Categorías diferenciadas</h3>
-                        <p class="lang-en">Aircraft, helicopters, ground traffic and police contacts remain identifiable on phone and CarPlay.</p>
-                        <p class="lang-es">Aviones, helicópteros, tráfico terrestre y contactos policiales siguen siendo identificables en iPhone y CarPlay.</p>
+                        <p class="lang-en">Aircraft, helicopters, ground traffic and police remain identifiable on iPhone and CarPlay.</p>
+                        <p class="lang-es">Aeronaves, helicópteros, tráfico terrestre y policía se distinguen en iPhone y CarPlay.</p>
                     </article>
                 </div>
             </div>
@@ -99,12 +141,12 @@
                     <div class="lang-en" lang="en">
                         <p class="section-label">CarPlay</p>
                         <h2>A driving view that stays focused</h2>
-                        <p class="section-lead">The Pro CarPlay surface follows the car, keeps police contacts distinct, and gives you direct controls for radius, filters and recentering.</p>
+                        <p class="section-lead">The Pro CarPlay view follows the car, keeps police contacts distinct, and puts radius, filters and recentering within immediate reach.</p>
                     </div>
                     <div class="lang-es" lang="es">
                         <p class="section-label">CarPlay</p>
                         <h2>Una vista centrada en la conducción</h2>
-                        <p class="section-lead">La vista CarPlay de Pro sigue al coche, mantiene separados los contactos policiales y ofrece controles directos de radio, filtros y centrado.</p>
+                        <p class="section-lead">La vista CarPlay de Pro sigue al coche, diferencia los contactos policiales y mantiene a mano el radio, los filtros y el centrado.</p>
                     </div>
                 </div>
                 <figure class="media-frame carplay-frame">
@@ -126,6 +168,20 @@
                     <p class="section-lead lang-en">From Spain and Western Europe to the Nordics, Central Europe, the Baltics, Serbia, Romania and Turkey. Availability still depends on aircraft transponders and third-party aviation sources.</p>
                     <p class="section-lead lang-es">Desde España y Europa occidental hasta los países nórdicos, Europa central, los Bálticos, Serbia, Rumanía y Turquía. La disponibilidad depende de los transpondedores y de fuentes de aviación externas.</p>
                 </div>
+            </div>
+        </section>
+
+        <section class="product-band trust-band">
+            <div class="product-inner trust-layout">
+                <div>
+                    <p class="section-label lang-en">Privacy by design</p><p class="section-label lang-es">Privacidad desde el diseño</p>
+                    <h2 class="lang-en">Your location answers a live question. It does not become a history.</h2>
+                    <h2 class="lang-es">Tu ubicación responde a una pregunta en directo. No se convierte en un historial.</h2>
+                    <p class="section-lead lang-en">RadarCopter processes location in real time to find relevant nearby aircraft. It is not permanently stored, and optional rewarded ads never appear unless you choose them.</p>
+                    <p class="section-lead lang-es">RadarCopter procesa la ubicación en tiempo real para encontrar aeronaves cercanas relevantes. No se almacena permanentemente y los anuncios con recompensa nunca aparecen si no los eliges.</p>
+                </div>
+                <ul class="trust-list lang-en"><li><strong>No location history</strong>Real-time processing only</li><li><strong>No account required</strong>No name, email or password</li><li><strong>No automatic ads</strong>Rewarded ads are always optional</li></ul>
+                <ul class="trust-list lang-es"><li><strong>Sin historial de ubicación</strong>Solo procesamiento en tiempo real</li><li><strong>Sin cuenta obligatoria</strong>Sin nombre, correo ni contraseña</li><li><strong>Sin anuncios automáticos</strong>Los anuncios con recompensa son opcionales</li></ul>
             </div>
         </section>
 

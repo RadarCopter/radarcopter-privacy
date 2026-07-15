@@ -18,17 +18,29 @@
     root.lang = lang;
     var btns = document.querySelectorAll(".lang-switch button");
     for (var i = 0; i < btns.length; i++) {
-      btns[i].classList.toggle("on", btns[i].getAttribute("data-lang") === lang);
+      var selected = btns[i].getAttribute("data-lang") === lang;
+      btns[i].classList.toggle("on", selected);
+      btns[i].setAttribute("aria-pressed", selected ? "true" : "false");
     }
     var badges = document.querySelectorAll("img.store-badge");
     for (var j = 0; j < badges.length; j++) {
       var src = badges[j].getAttribute("data-src-" + lang);
       if (src) badges[j].src = src;
+      badges[j].alt = lang === "es" ? "Descargar en el App Store" : "Download on the App Store";
     }
     try { localStorage.setItem(KEY, lang); } catch (e) {}
   }
 
   window.rcSetLang = apply;
+
+  var header = document.querySelector(".site-header");
+  if (header) {
+    var syncHeader = function () {
+      header.classList.toggle("is-scrolled", window.scrollY > 12);
+    };
+    window.addEventListener("scroll", syncHeader, { passive: true });
+    syncHeader();
+  }
 
   // Apply before first paint when possible (script is loaded at end of body).
   apply(detect());
