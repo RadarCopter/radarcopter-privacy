@@ -258,7 +258,10 @@ main:not(.product-main):not(.error-main) {
 .app-card .app-meta strong { display: block; font-size: 19px; line-height: 1.2; }
 .app-card .app-meta p { margin: 5px 0 0; color: #b8c9ce; font-size: 14px; }
 .app-card a.store-link { display: block; line-height: 0; }
+.store-links { display: flex; align-items: center; gap: 4px; }
 .store-badge { display: block; width: auto; height: 44px; }
+.store-badge.play-badge { height: 52px; margin: -4px 0; }
+.is-android .google-store { order: -1; }
 
 .hero {
   margin: 58px 0 34px;
@@ -534,6 +537,7 @@ details.faq > :last-child { margin-bottom: 24px; }
 
 .hero-store-link { display: block; line-height: 0; }
 .hero-store-link img { width: auto; height: 50px; }
+.hero-store-link img.play-badge { height: 58px; margin: -4px 0; }
 
 .text-link-light {
   color: var(--white);
@@ -806,8 +810,9 @@ details.faq > :last-child { margin-bottom: 24px; }
   .support-page main { width: min(100% - 32px, 980px); padding-top: 26px; }
   .app-card { grid-template-columns: auto 1fr; padding: 17px 18px; }
   .app-card img.app-icon { width: 58px; height: 58px; border-radius: 13px; }
-  .app-card .store-link { grid-column: 1 / -1; }
+  .app-card .store-links { grid-column: 1 / -1; }
   .app-card .store-link .store-badge { height: 40px; }
+  .app-card .store-link .play-badge { height: 48px; }
   .hero { margin: 42px 0 28px; }
   .hero h1 { font-size: 36px; }
   .content h2 { margin-top: 40px; font-size: 21px; }
@@ -841,6 +846,8 @@ details.faq > :last-child { margin-bottom: 24px; }
   .product-hero-copy { width: calc(100% - 30px); }
   .product-hero h1 { font-size: 43px; }
   .hero-store-link img { height: 46px; }
+  .hero-store-link img.play-badge { height: 52px; }
+  .hero-actions { gap: 10px; }
   .text-link-light { width: 100%; }
   .product-band h2 { font-size: 29px; }
 }

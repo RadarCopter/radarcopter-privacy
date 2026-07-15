@@ -26,12 +26,20 @@
     for (var j = 0; j < badges.length; j++) {
       var src = badges[j].getAttribute("data-src-" + lang);
       if (src) badges[j].src = src;
-      badges[j].alt = lang === "es" ? "Descargar en el App Store" : "Download on the App Store";
+      if (badges[j].getAttribute("data-store") === "google") {
+        badges[j].alt = lang === "es" ? "Descargar en Google Play" : "Get it on Google Play";
+      } else {
+        badges[j].alt = lang === "es" ? "Descargar en el App Store" : "Download on the App Store";
+      }
     }
     try { localStorage.setItem(KEY, lang); } catch (e) {}
   }
 
   window.rcSetLang = apply;
+
+  if (/Android/i.test(navigator.userAgent || "")) {
+    document.documentElement.classList.add("is-android");
+  }
 
   var header = document.querySelector(".site-header");
   if (header) {
